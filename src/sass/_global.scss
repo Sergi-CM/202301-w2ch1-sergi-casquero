@@ -83,3 +83,50 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .stats-component {
+    width: 1110px;
+    height: 445px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+
+    border-radius: measures.$border-radius;
+
+    &__text-container {
+      padding-right: 150px;
+      padding: 60px 150px 60px 60px;
+    }
+
+    &__image {
+      width: 50%;
+      height: 100%;
+      border-radius: 0 measures.$border-radius measures.$border-radius 0;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text {
+      padding-top: 10px;
+      padding-bottom: 50px;
+    }
+
+    &__overlay {
+      width: 50%;
+      height: 100%;
+      border-radius: 0 measures.$border-radius measures.$border-radius 0;
+    }
+
+    &__stats-container {
+      flex-direction: row;
+      gap: 45px;
+    }
+  }
+}
