@@ -1,5 +1,6 @@
 @use "variables/colors";
 @use "variables/measures";
+@use "variables/typographies";
 
 .stats-component {
   position: absolute;
@@ -7,18 +8,38 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 330px;
-  height: 790px;
+  width: measures.$main-width;
+  height: measures.$main-height;
 
-  border: 1px solid red;
-  border-radius: 8px;
+  background-color: colors.$primary-color-desaturated-blue;
+  color: colors.$secondary-color-paragraph-white;
+  font-family: typographies.$main-font;
+
+  border-radius: measures.$border-radius;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+
+  text-align: center;
+
+  .text-color {
+    color: colors.$primary-color-violet;
+  }
 
   &__image {
     width: 100%;
     border-radius: measures.$border-radius measures.$border-radius 0 0;
+  }
+
+  &__text-container {
+    padding: measures.$main-padding;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 }
